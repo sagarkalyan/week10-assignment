@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "name": "nodejs-express",
+  "builds": [{ "src": "api/*/index.js", "use": "@now/node" }],
+  "routes": [
+    { "src": "/api/joi", "methods": ["POST"], "dest": "/api/joi/index.js" },
+    { "src": "/api/yup", "methods": ["POST"], "dest": "/api/yup/index.js" },
+    { "src": "/", "status": 404},
+    { "src": "/api", "status": 404}
+  ]
+}
